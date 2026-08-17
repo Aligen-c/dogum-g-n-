@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>İyi ki Doğdun ❤️</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="preload" href="music/iyikidogdun.mp3" as="audio">
+    <link rel="preload" href="music/sarki1.mp3" as="audio">
+    <link rel="preload" href="music/sarki2.mp3" as="audio">
+    <link rel="preload" href="music/sarki3.mp3" as="audio">
+    <link rel="preload" href="music/sarki4.mp3" as="audio">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <!-- ===================================================== -->
+    <!-- GİRİŞ -->
+    <!-- ===================================================== -->
+
+    <section class="screen hero active" id="giris">
+
+        <img
+            class="main-photo"
+            src="images/biz.jpg"
+            alt="Biz"
+        >
+
+        <div class="hero-overlay"></div>
+
+        <div id="hearts"></div>
+
+        <div class="side-text left-text">
+            Seninle olan<br>
+            her anım,<br>
+            en sevdiğim<br>
+            anım.
+            <span>♡</span>
+        </div>
+
+        <div class="side-text right-text">
+            İyi ki varsın,<br>
+            iyi ki hayatımdasın.
+            <span>♡</span>
+        </div>
+
+        <div class="hero-content">
+
+            <h1>
+                İyi ki Doğdun
+                <span class="outline-heart">♡</span>
+            </h1>
+
+            <p class="subtitle">
+                ✧ Sana küçük bir sürpriz hazırladım... ✧
+            </p>
+
+            <div class="divider">
+                <span class="line"></span>
+                <span class="middle-heart">♡</span>
+                <span class="line"></span>
+            </div>
+
+            <button
+                class="pink-button"
+                onclick="basla()"
+            >
+                Başla ♥
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- DOĞUM GÜNÜ -->
+    <!-- ===================================================== -->
+
+    <section
+        class="screen password-screen"
+        id="sifreEkrani"
+    >
+
+        <div class="password-glow"></div>
+
+        <div class="glass-card password-card">
+
+            <div class="mini-heart">♡</div>
+
+            <h2>
+                Minik bir kontrol yapalım
+            </h2>
+
+            <p class="password-description">
+                Buraya sadece çok özel biri girebilir...
+            </p>
+
+            <label for="birthday">
+                Doğum gününü gir bakalım 🎂
+            </label>
+
+            <input
+                type="date"
+                id="birthday"
+            >
+
+            <button
+                class="pink-button"
+                onclick="dogumGunuKontrol()"
+            >
+                Kontrol Et ♥
+            </button>
+
+            <p
+                class="error-message"
+                id="sifreMesaji"
+            ></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- PASTA -->
+    <!-- ===================================================== -->
+
+    <section
+        class="screen cake-screen"
+        id="pastaEkrani"
+    >
+
+        <div id="confetti"></div>
+
+        <div class="cake-content">
+
+            <div class="cake-title-area">
+
+                <span class="tiny-stars">
+                    ✦ ✧ ✦
+                </span>
+
+                <h2>
+                    O zaman bir pastayı hak ettin 🎂
+                </h2>
+
+                <p id="wishText">
+                    Önce güzelce bir dilek tut...
+                </p>
+
+            </div>
+
+
+            <div class="cake-wrapper">
+
+                <div class="candles">
+
+                    <div class="candle candle-blue">
+                        <div class="flame"></div>
+                    </div>
+
+                    <div class="candle candle-purple">
+                        <div class="flame"></div>
+                    </div>
+
+                    <div class="candle candle-pink">
+                        <div class="flame"></div>
+                    </div>
+
+                    <div class="candle candle-red">
+                        <div class="flame"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="cake-top">
+
+                    <div class="cake-photo">
+
+                        <img
+                            src="images/pastafoto.jpg"
+                            alt="Pastadaki fotoğraf"
+                        >
+
+                    </div>
+
+                    <div class="cream cream-1"></div>
+                    <div class="cream cream-2"></div>
+                    <div class="cream cream-3"></div>
+                    <div class="cream cream-4"></div>
+
+                </div>
+
+
+                <div class="cake-body">
+
+                    <span class="cake-heart cake-heart-1">♥</span>
+                    <span class="cake-heart cake-heart-2">♥</span>
+                    <span class="cake-heart cake-heart-3">♥</span>
+
+                </div>
+
+                <div class="cake-bottom"></div>
+
+            </div>
+
+
+            <div
+                class="wish-controls"
+                id="wishControls"
+            >
+
+                <p>
+                    Dileğini güzelce tut...
+                </p>
+
+                <button
+                    class="pink-button ready-button"
+                    onclick="hazirim()"
+                >
+                    Hazırım ❤️
+                </button>
+
+            </div>
+
+
+            <div
+                class="microphone-area hidden"
+                id="microphoneArea"
+            >
+
+                <div class="mic-icon">
+                    🎤
+                </div>
+
+                <h3>
+                    Şimdi mumlara üfle...
+                </h3>
+
+                <p class="mic-description">
+                    Telefonunun mikrofonuna doğru üfle 💨
+                </p>
+
+                <div class="sound-meter">
+
+                    <div
+                        class="sound-level"
+                        id="soundLevel"
+                    ></div>
+
+                </div>
+
+                <p
+                    class="mic-status"
+                    id="micStatus"
+                >
+                    Mikrofon hazırlanıyor...
+                </p>
+
+                <div class="manual-section">
+
+                    <div class="or-divider">
+                        <span></span>
+                        <p>veya</p>
+                        <span></span>
+                    </div>
+
+                    <button
+                        class="manual-blow-button"
+                        onclick="normalUfle()"
+                    >
+                        Üfle 💨
+                    </button>
+
+                    <p class="manual-info">
+                        İstersen buraya basarak da mumları söndürebilirsin ❤️
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="final-wish hidden"
+                id="finalWish"
+            >
+
+                <div class="final-heart">
+                    ♡
+                </div>
+
+                <h2>
+                    Tüm dileklerin gerçek olsun aşkım
+                </h2>
+
+                <p>
+                    İçlerinde ben de olayım ömrüm ❤️
+                </p>
+
+                <button
+                    class="pink-button"
+                    onclick="devamEt()"
+                >
+                    Sürprize devam et →
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- ANA MENÜ -->
+    <!-- ===================================================== -->
+
+    <section
+        class="screen menu-screen"
+        id="menuEkrani"
+    >
+
+        <div class="menu-light menu-light-one"></div>
+        <div class="menu-light menu-light-two"></div>
+
+        <div class="menu-container">
+
+            <div class="menu-top">
+
+                <span class="menu-mini-text">
+                    ✦ Senin için biriktirdiğim şeyler ✦
+                </span>
+
+                <h2>
+                    Bizim Dünyamız ♡
+                </h2>
+
+                <p>
+                    Burada biraz biz, biraz sen,
+                    biraz da seni ne kadar sevdiğim var.
+                </p>
+
+            </div>
+
+
+            <div class="menu-grid">
+
+                <button
+                    class="memory-card"
+                    onclick="bolumAc('fotografEkrani')"
+                >
+
+                    <div class="card-icon">📸</div>
+
+                    <div class="card-text">
+
+                        <span class="card-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Bizden Kareler
+                        </h3>
+
+                        <p>
+                            Dönüp dönüp bakmak istediğim anlarımız.
+                        </p>
+
+                    </div>
+
+                    <div class="card-arrow">→</div>
+
+                </button>
+
+
+                <button
+                    class="memory-card"
+                    onclick="yemekBolumunuAc()"
+                >
+
+                    <div class="card-icon">🍝</div>
+
+                    <div class="card-text">
+
+                        <span class="card-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Seni Yerken Yakaladığım Anlar
+                        </h3>
+
+                        <p>
+                            En tatlı hallerinden bazıları...
+                        </p>
+
+                    </div>
+
+                    <div class="card-arrow">→</div>
+
+                </button>
+
+
+                <button
+                    class="memory-card"
+                    onclick="videoBolumunuAc()"
+                >
+
+                    <div class="card-icon">🎬</div>
+
+                    <div class="card-text">
+
+                        <span class="card-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Videolarımız
+                        </h3>
+
+                        <p>
+                            Bazı anlar tek bir kareye sığmıyor.
+                        </p>
+
+                    </div>
+
+                    <div class="card-arrow">→</div>
+
+                </button>
+
+
+                <button
+                    class="memory-card"
+                    onclick="mektupBolumunuAc()"
+                >
+
+                    <div class="card-icon">💌</div>
+
+                    <div class="card-text">
+
+                        <span class="card-number">
+                            04
+                        </span>
+
+                        <h3>
+                            Sana Bir Mektubum Var
+                        </h3>
+
+                        <p>
+                            En sona saklamak istediğim birkaç şey...
+                        </p>
+
+                    </div>
+
+                    <div class="card-arrow">→</div>
+
+                </button>
+
+            </div>
+
+
+            <p class="menu-bottom-text">
+                ♡ Hepsi senin için ♡
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- FOTOĞRAFLAR -->
+    <!-- ===================================================== -->
+
+    <section
+        class="screen photos-screen"
+        id="fotografEkrani"
+    >
+
+        <button
+            class="back-button"
+            onclick="anaMenuyeDon()"
+        >
+            ← Bizim Dünyamız
+        </button>
+
+        <div class="photos-background-heart heart-bg-1">♡</div>
+        <div class="photos-background-heart heart-bg-2">♡</div>
+        <div class="photos-background-heart heart-bg-3">♡</div>
+
+
+        <div class="photos-container">
+
+            <div class="photos-header">
+
+                <span class="photos-small-title">
+                    ♡ Biriktirdiğimiz güzel anlar ♡
+                </span>
+
+                <h2>
+                    Bizden Kareler
+                </h2>
+
+                <p>
+                    Bazı anlar geçip gidiyor ama fotoğraflar onları
+                    biraz daha yanımızda tutuyor.
+                    Ben de bizimkileri burada saklamak istedim.
+                </p>
+
+                <div class="gallery-hint">
+                    Bir fotoğrafın arkasında ne olduğunu görmek için karta dokun ♡
+                </div>
+
+            </div>
+
+
+            <div
+                class="scrapbook-gallery"
+                id="polaroidGallery"
+            ></div>
+
+
+            <div class="your-turn-card">
+
+                <div class="your-turn-heart">
+                    ♡
+                </div>
+
+                <span class="your-turn-small">
+                    31. küçük anımız
+                </span>
+
+                <h3>
+                    Şimdi sıra sende
+                </h3>
+
+                <p>
+                    Bu fotoğraflara bakarken aklından geçen
+                    bir şeyi de sen burada bırakmak ister misin?
+                </p>
+
+                <textarea
+                    id="seninNotun"
+                    maxlength="600"
+                    placeholder="Aklından geçen ne varsa buraya yaz... ♡"
+                    oninput="karakterSay()"
+                ></textarea>
+
+                <div class="note-bottom">
+
+                    <span id="karakterSayaci">
+                        0 / 600
+                    </span>
+
+                    <button
+                        class="save-note-button"
+                        onclick="notuKaydet()"
+                    >
+                        Notunu sakla ♡
+                    </button>
+
+                </div>
+
+                <p
+                    class="note-status"
+                    id="notDurumu"
+                ></p>
+
+            </div>
+
+
+            <div class="photos-ending">
+
+                <span>♡</span>
+
+                <p>
+                    Daha dolduracağımız çok kare var...
+                </p>
+
+                <small>
+                    Ve umarım bu sayfa hiçbir zaman tamamlanmaz.
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- FOTOĞRAF MODAL -->
+    <!-- ===================================================== -->
+
+    <div
+        class="photo-modal hidden"
+        id="photoModal"
+    >
+
+        <button
+            class="modal-close"
+            onclick="fotografKapat()"
+        >
+            ×
+        </button>
+
+        <button
+            class="modal-arrow modal-left"
+            onclick="oncekiFotograf()"
+        >
+            ‹
+        </button>
+
+        <div class="modal-center">
+
+            <div class="modal-polaroid">
+
+                <img
+                    src=""
+                    id="modalPhoto"
+                    alt="Fotoğraf"
+                >
+
+                <p id="modalCaption"></p>
+
+            </div>
+
+            <div
+                class="photo-counter"
+                id="photoCounter"
+            >
+                1 / 30
+            </div>
+
+            <div class="swipe-hint">
+                ← telefonda kaydırabilirsin →
+            </div>
+
+        </div>
+
+        <button
+            class="modal-arrow modal-right"
+            onclick="sonrakiFotograf()"
+        >
+            ›
+        </button>
+
+    </div>
+
+
+    <!-- ===================================================== -->
+    <!-- YEMEK -->
+    <!-- ===================================================== -->
+
+    <section
+        class="screen food-screen"
+        id="yemekEkrani"
+    >
+
+        <button
+            class="back-button"
+            onclick="anaMenuyeDon()"
+        >
+            ← Bizim Dünyamız
+        </button>
+
+        <div class="food-light food-light-1"></div>
+        <div class="food-light food-light-2"></div>
+
+
+        <div
+            class="food-quiz-wrapper"
+            id="foodQuizWrapper"
+        >
+
+            <div class="food-quiz-card">
+
+                <div class="quiz-icon">
+                    🍝
+                </div>
+
+                <span
+                    class="quiz-step"
+                    id="quizStep"
+                >
+                    SORU 1 / 2
+                </span>
+
+                <h2 id="foodQuestion">
+                    En sevdiğin yemek ne?
+                </h2>
+
+                <p
+                    class="quiz-subtitle"
+                    id="foodQuestionSubtitle"
+                >
+                    Bunu bilmen gerekiyor hanımefendi 👀
+                </p>
+
+                <div class="food-answer-area">
+
+                    <input
+                        type="text"
+                        id="foodAnswer"
+                        placeholder="Cevabını yaz..."
+                        autocomplete="off"
+                    >
+
+                    <button
+                        onclick="yemekCevabiniKontrolEt()"
+                    >
+                        Cevapla ♡
+                    </button>
+
+                </div>
+
+                <p
+                    class="food-answer-message"
+                    id="foodAnswerMessage"
+                ></p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="food-archive hidden"
+            id="foodArchive"
+        >
+
+            <div class="food-archive-header">
+
+                <span class="food-small-title">
+                    ✦ Aşkımızın küçük yemek rehberi ✦
+                </span>
+
+                <h2>
+                    Aşkımızın Yemek Arşivi
+                </h2>
+
+                <p>
+                    Kaloriler sayılmadı, anılar sayıldı. ♡
+                </p>
+
+                <div class="food-receipt-top">
+
+                    <span>
+                        MASA: 2 KİŞİLİK
+                    </span>
+
+                    <span>
+                        DURUM: AŞIRI TATLI
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div
+                class="food-timeline"
+                id="foodTimeline"
+            ></div>
+
+
+            <div class="food-ending">
+
+                <span class="food-ending-icon">
+                    🍴
+                </span>
+
+                <h3>
+                    Afiyet olsun aşkım
+                </h3>
+
+                <p>
+                    Daha birlikte yiyeceğimiz çok şey var.
+                </p>
+
+                <small>
+                    Ama benim favorim yine sensin ♡
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- VİDEOLAR -->
+    <!-- ===================================================== -->
+
+    <section
+        class="screen videos-screen"
+        id="videoEkrani"
+    >
+
+        <button
+            class="back-button"
+            onclick="videoBolumundenCik()"
+        >
+            ← Bizim Dünyamız
+        </button>
+
+        <div class="cinema-light cinema-light-one"></div>
+        <div class="cinema-light cinema-light-two"></div>
+
+
+        <!-- VİDEO SORUSU -->
+
+        <div
+            class="video-question-wrapper"
+            id="videoQuestionWrapper"
+        >
+
+            <div class="video-question-card">
+
+                <div class="video-question-icon">
+                    🏡🎂
+                </div>
+
+                <span>
+                    GELECEKTEN KÜÇÜK BİR SORU
+                </span>
+
+                <h2>
+                    Ne zaman evimizde kutlayacağız?
+                </h2>
+
+                <p>
+                    Yıl olarak yaz bakalım aşkım ♡
+                </p>
+
+                <div class="video-answer-area">
+
+                    <input
+                        id="videoYearAnswer"
+                        type="number"
+                        inputmode="numeric"
+                        placeholder="20__"
+                    >
+
+                    <button
+                        onclick="videoYiliniKontrolEt()"
+                    >
+                        Cevapla ♡
+                    </button>
+
+                </div>
+
+                <p
+                    class="video-question-message"
+                    id="videoQuestionMessage"
+                ></p>
+
+            </div>
+
+        </div>
+
+
+        <!-- VİDEO ARŞİVİ -->
+
+        <div
+            class="videos-container hidden"
+            id="videosArchive"
+        >
+
+            <div class="videos-header">
+
+                <span class="videos-small-title">
+                    ✦ Bazen bir fotoğraf yetmiyor ✦
+                </span>
+
+                <h2>
+                    Videolarımız
+                </h2>
+
+                <p>
+                    Bazı anları sadece hatırlamak değil,
+                    tekrar tekrar izlemek istiyorum.
+                </p>
+
+                <div class="cinema-ticket">
+
+                    <span>
+                        🎟 2 KİŞİLİK
+                    </span>
+
+                    <span>
+                        ♡ BİZİM FİLMİMİZ
+                    </span>
+
+                    <span>
+                        SÜRE: BİR ÖMÜR
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="video-gallery"
+                id="videoGallery"
+            ></div>
+
+
+            <div class="videos-ending">
+
+                <span>🎬</span>
+
+                <h3>
+                    Daha çekeceğimiz çok sahne var.
+                </h3>
+
+                <p>
+                    Ve umarım bizim filmimizin sonu hiç gelmez. ♡
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- VİDEO MODAL -->
+    <!-- ===================================================== -->
+
+    <div
+        class="video-modal hidden"
+        id="videoModal"
+    >
+
+        <button
+            class="video-modal-close"
+            onclick="videoKapat()"
+        >
+            ×
+        </button>
+
+        <button
+            class="video-modal-arrow video-modal-left"
+            onclick="oncekiVideo()"
+        >
+            ‹
+        </button>
+
+        <div class="video-modal-box">
+
+            <div class="video-modal-header">
+
+                <span>
+                    🎬 ŞİMDİ OYNUYOR
+                </span>
+
+                <span id="videoModalCounter">
+                    01 / 26
+                </span>
+
+            </div>
+
+            <video
+                id="modalVideo"
+                controls
+                playsinline
+                preload="metadata"
+            ></video>
+
+            <p id="videoModalCaption">
+                Bizim küçük sahnelerimizden biri ♡
+            </p>
+
+        </div>
+
+        <button
+            class="video-modal-arrow video-modal-right"
+            onclick="sonrakiVideo()"
+        >
+            ›
+        </button>
+
+    </div>
+
+
+    <!-- ===================================================== -->
+    <!-- MEKTUP -->
+    <!-- ===================================================== -->
+
+    <section
+        class="screen letter-screen"
+        id="mektupEkrani"
+    >
+
+        <button
+            class="back-button"
+            onclick="anaMenuyeDon()"
+        >
+            ← Bizim Dünyamız
+        </button>
+
+        <div class="letter-glow letter-glow-one"></div>
+        <div class="letter-glow letter-glow-two"></div>
+
+
+        <div class="letter-container">
+
+            <div
+                class="envelope-area"
+                id="envelopeArea"
+            >
+
+                <span class="letter-small-top">
+                    ✦ En sona sakladığım şey ✦
+                </span>
+
+                <h2>
+                    Sana Bir Mektubum Var
+                </h2>
+
+                <p>
+                    Bunu sana söylemek istediğim çok şey olduğu için yazdım.
+                </p>
+
+
+                <div class="envelope">
+
+                    <div class="envelope-back"></div>
+
+                    <div class="envelope-letter-preview">
+                        <span>Ela'ya ♡</span>
+                    </div>
+
+                    <div class="envelope-front"></div>
+
+                    <div class="envelope-flap"></div>
+
+                    <div class="envelope-heart">
+                        ♡
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="open-letter-button"
+                    onclick="mektubuAc()"
+                >
+                    Mektubu aç ♡
+                </button>
+
+            </div>
+
+
+            <article
+                class="letter-paper hidden"
+                id="letterPaper"
+            >
+
+                <div class="letter-paper-top">
+
+                    <span>
+                        💌
+                    </span>
+
+                    <small>
+                        Sana, tüm kalbimle...
+                    </small>
+
+                </div>
+
+
+                <h3>
+                    Sevgili sevgilim, ömrüm, yavrum, ruhum, karım,
+                </h3>
+
+
+                <div class="letter-text">
+
+                    <p>
+                        İYİ Kİ DOĞDUN HAYATIMA İYİ Kİ GELEN HER ŞEYİM OLAN ÖMRÜM OLAN KADIN HEP OL. DOĞUM GÜNÜN KUTLU OLSUN, DAHA NİCE DOĞUM GÜNLERİNE BİRLİKTE YAVRUM KARIM ❤️. Bugün dünyanın en güzel ve en önemli günü. Çünkü bana varlığıyla huzur veren, her konuda yetenekli, en çok gurur duyduğum, neşesiyle enerjisiyle yaşamıma renk katan senin doğum günün. Seninle ilgili saymak istediğim o kadar fazla şey o kadar fazla anı var ki, siteyi hazırlarken tekrardan fark ettim ne kadar fazla anı biriktirdiğimizi ve biriktireceğimizi.
+                    </p>
+
+                    <p>
+                        Bi yerden başlamak istersem senin tatlı konuşmanla başlardım (Gıcıklıktan bahsedim sandın de mi, ona da bayılıyorum zaten ). Çünkü düşününce başta böyle benle olan tatlı konuşman sonrasındaki hep devam eden neşemiz en sevdiğim özelliklerinden biri. Düşünceli olman yok mu bir de gerçekten bayılıyorum yani bi insan nasıl bu kadar güzel ilgilenebilir ki benimle, gerçekten şu an bunu çok istedim yanıma gelsene.
+                    </p>
+
+                    <p>
+                        Hayatımda kimseye ruhum diyeceğimi düşünmezdim ve seni gördüğüm gibi konuştuğumuz gibi ruhum olduğunu anladım. Yaptığımız aktiviteler ortak yönlerimiz neşeyle geçirdiğimiz bir sürü vakit, ya en güzel yanı da biz ilişkinin başında bile birbirimize aşırı güvenip aşırı seviyorduk aşırı güzel vakit geçiriyorduk ve şu ana bakınca da bu hep gitgide artmış ve hep böyle artarak bir ömür geçireceğiz aşkım.
+                    </p>
+
+                    <p>
+                        Sonuçta daha yurt dışına çıkacağız ev alacağız bir sürü planımız var. Ve iyi ki de hepsinin içinde sen varsın hep sen ol. Bana bu kadar iyi geldiğin için, hayatıma neşe kattığın için, kahkahaların için, kendine ve bize sürekli bir şeyler kattığın için, güzel bakış açın için, ince düşünceli olduğun için, her zaman bana destek olduğun için, merhametin, sevgin, saygın, en önemlisi de sen olduğun teşekkür ederim ruhumm.
+                    </p>
+
+                    <p>
+                        Umarım beğenmişsindir hazırladıklarımı elimden geldiğince sana güzel hediyeler yapmaya çalıştım ya da aldım. Güle güle kullan hepsini daha bir sürü alıcam çünkü hediye. 20. Yaş bence çok güzel bir yaş çünkü hayatında artık olgunlaşma ve sorumluluk evresi daha da artıyor senin bunlara ihtiyacın yok tabi aşkım, iş hayatına gireceğin, yeni yerler keşfedeceğimiz, yeni arkadaşlar edineceğin, sürekli güzel bir koşuşturma içinde olacağın, kendine bir sürü şey katacağın, her şeyin düzene oturacağı
+                    </p>
+
+                    <p>
+                        , evimizi kuracağımız ve evleneceğimiz bol kahkahalı, huzurlu ve mutlu içinde benim olduğum 20 li yaşların olsun canım aşkım. Buraya daha çok şey yazacağız senle bir sürü daha anımız olacak ve hepside sayende harika olacak. İyi ki doğdun ve hep ol ömrüm, seni her şeyden çok seviyorum. Sana çok aşığım yavrum.
+                    </p>
+
+                </div>
+
+
+                <div class="letter-signature">
+
+                    <span>
+                        Birlikte nice yaşlara
+                    </span>
+
+                    <strong>
+                        karım Ela Genç ❤️🤍❤️.
+                    </strong>
+
+                </div>
+
+
+                <div class="letter-final-heart">
+                    ♡
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- MÜZİK -->
+    <!-- ===================================================== -->
+
+    <div
+        class="music-player hidden-player"
+        id="musicPlayer"
+    >
+
+        <div class="music-disc">
+            ♫
+        </div>
+
+        <div class="music-info">
+
+            <span
+                class="music-status"
+                id="musicStatus"
+            >
+                Şimdi çalıyor
+            </span>
+
+            <strong id="musicTitle">
+                Yaşlı Amca - Ve Ben
+            </strong>
+
+            <div class="music-progress-background">
+
+                <div
+                    class="music-progress"
+                    id="musicProgress"
+                ></div>
+
+            </div>
+
+            <span
+                class="music-time"
+                id="musicTime"
+            >
+                0:00 / 2:00
+            </span>
+
+        </div>
+
+        <div class="music-buttons">
+
+            <button
+                id="playPauseButton"
+                onclick="muzigiDuraklatDevamEt()"
+            >
+                ⏸
+            </button>
+
+            <button
+                onclick="sonrakiSarkiyaGec()"
+            >
+                ⏭
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ===================================================== -->
+    <!-- SESLER -->
+    <!-- ===================================================== -->
+
+    <audio
+        id="birthdayAudio"
+        src="music/iyikidogdun.mp3"
+        preload="auto"
+    ></audio>
+
+    <audio
+        id="song1Audio"
+        src="music/sarki1.mp3"
+        preload="auto"
+    ></audio>
+
+    <audio
+        id="song2Audio"
+        src="music/sarki2.mp3"
+        preload="auto"
+    ></audio>
+
+    <audio
+        id="song3Audio"
+        src="music/sarki3.mp3"
+        preload="auto"
+    ></audio>
+
+    <audio
+        id="song4Audio"
+        src="music/sarki4.mp3"
+        preload="auto"
+    ></audio>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
