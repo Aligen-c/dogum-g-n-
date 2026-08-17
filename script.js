@@ -1280,7 +1280,7 @@ const YEMEK_DOSYALARI = [
 
     {
         tip: "video",
-        src: "videolar/video8.mp4"
+        src: "images/Yemek8.mp4"
     },
 
     { tip: "resim", src: "images/Yemek9.jpg" },
